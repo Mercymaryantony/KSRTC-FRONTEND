@@ -1,7 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    const [data,setdata]=useState({
+        "emailid":"",
+        "pass":""
+    })
+    const inputhandler = (event)=>{
+        setdata({...data,[event.target.name]:event.target.value})
+    }
+    const readValue=()=>{
+        axios.post("http://localhost:8805/login",data).then(
+            (response)=>{
+                if(response.data.status == "success"){
+                    sessionStorage.setItem("token",response.data.token)
+                    sessionStorage.setItem("userid",response.data.userid)
+                    navigate("/dashboard")
+                }
+                else{
+                    alert("FAILED")
+                }
+            }
+        ).catch(
+            (error)=>{
+                console.log(error.message)
+                alert(error.message)
+            }
+        ).finally()
+    }
+    let navigate = useNavigate()
   return (
     <div>
         <div className="container">
