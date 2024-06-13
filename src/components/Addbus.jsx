@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Addbus = () => {
   return (
     <div>
+        <Navbar/>
          <div className="container">
             <br></br>
             <div className="row">
