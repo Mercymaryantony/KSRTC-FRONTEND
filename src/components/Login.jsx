@@ -33,7 +33,7 @@ const Login = () => {
     let navigate = useNavigate()
   return (
     <div>
-        <Navbar/>
+       
         <div className="container">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -57,7 +57,7 @@ const Login = () => {
                         <br></br>
                         <br></br>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <h1>CLICK HERE TO <button className="btn btn-success">SIGN UP</button></h1>
+                            <h1>CLICK HERE TO<Link to='/signup'><button className="btn btn-success">SIGN UP</button></Link> </h1>
                         </div>
                         
                        
