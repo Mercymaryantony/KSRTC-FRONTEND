@@ -17,6 +17,7 @@ const Signup = () => {
     }
 
     const readValue = ()=>{
+        if(data.pass==data.cpass){
         axios.post("http://localhost:8805/signup",data).then(
             (response)=>{
                 if(response.data.status=="SIGNUP"){
@@ -26,7 +27,15 @@ const Signup = () => {
                     alert("ATTEMPT FAILED !!")
                 }
             }
-        )
+        ).catch(
+            (error)=>{
+                console.log(error.message)
+                alert(error.message)
+            }
+        ).finally()}
+        else{
+            alert("Incorrect password")
+        }
     }
   return (
     <div>
