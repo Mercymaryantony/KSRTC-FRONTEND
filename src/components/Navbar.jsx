@@ -22,6 +22,9 @@ const Navbar = () => {
           <Link class="nav-link" to="/addbus">ADD BUS</Link>
         </li>
         <li class="nav-item">
+          <Link class="nav-link" to="/searchbus">SEARCH BUS</Link>
+        </li>
+        <li class="nav-item">
           <Link class="nav-link" to="/view">VIEW</Link>
         </li>
       </ul>
