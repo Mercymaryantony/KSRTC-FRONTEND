@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Addbus from './components/Addbus';
 import Searchbus from './components/Searchbus';
+import View from './components/View';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/signup' element={<Signup/>} />
         <Route path='/addbus' element={<Addbus/>} />
         <Route path='/searchbus' element={<Searchbus/>} />
+        <Route path='/view' element={<View/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
        
       </Routes>
