@@ -5,7 +5,6 @@ import Login from './components/Login';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Addbus from './components/Addbus';
-import Searchbus from './components/Searchbus';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path='/' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
         <Route path='/addbus' element={<Addbus/>} />
-        <Route path='/searchbus' element={<Searchbus/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
        
       </Routes>
