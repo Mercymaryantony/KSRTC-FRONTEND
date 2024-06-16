@@ -14,9 +14,9 @@ const Addbus = () => {
     }
 
     const readValue = ()=>{
-        axios.post("http://localhost:8805/add",data).then(
+        axios.post("http://localhost:8805/addbus",data).then(
             (response)=>{
-                if(response.data.status=="ADD"){
+                if(response.data.status=="ADDED"){
                     alert("ADD")
                 }
                 else{

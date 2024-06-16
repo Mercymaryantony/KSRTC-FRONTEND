@@ -75,10 +75,10 @@ const Signup = () => {
                             <input type="password" name="cpass" value={data.cpass} onChange={inputhandler} id="" className="form-control" />
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                           <Link to='/addbus'> <button className="btn btn-primary" onClick={readValue}>REGISTER</button></Link>
+                         <button className="btn btn-primary" onClick={readValue}>REGISTER</button>
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                            <button className="btn btn-success">BACK TO LOGIN</button>
+                            <Link to='/'><button className="btn btn-success">BACK TO LOGIN</button></Link>
                         </div>
                        
                     </div>
